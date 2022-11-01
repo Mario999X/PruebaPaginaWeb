@@ -35,9 +35,9 @@ fun main() {
 
         pB = ProcessBuilder("bash", "-c", "cd $pathJar && java -jar PruebaPaginaWeb-1.0.jar $url").start()
         reader = pB.inputStream.bufferedReader().lineSequence().joinToString("\n")
-        println(reader)
+        //println(reader)
 
-        //println("HTML leido correctamente")
+        println("HTML leido correctamente")
         file.writeText(reader)
         println("HTML escrito correctamente en $pathData")
     }
