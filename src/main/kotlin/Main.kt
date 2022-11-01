@@ -27,6 +27,12 @@ fun main() {
         reader = pB.inputStream.bufferedReader().lineSequence().joinToString("\n")
         //println(reader)
 
+        /* while (reader.readLine().also { line = it } != null) {
+           println(line)}
+           // Con estos cambios (creacion de un String? line | dejando a reader en buffered) podemos
+           leer lo sacado por terminal linea a linea
+           */
+
         println("HTML leido correctamente")
         file.writeText(reader)
         println("HTML escrito correctamente en $pathData")
