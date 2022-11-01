@@ -23,7 +23,7 @@ fun main() {
 
     if (!comprobador) {
 
-        pB = ProcessBuilder("cmd.exe", "/c", "cd $pathJar & java -jar PruebaPaginaWeb-1.0-SNAPSHOT.jar $url").start()
+        pB = ProcessBuilder("cmd.exe", "/c", "cd $pathJar & java -jar PruebaPaginaWeb-1.0.jar $url").start()
         reader = pB.inputStream.bufferedReader().lineSequence().joinToString("\n")
 
         println("HTML leido correctamente")
@@ -32,7 +32,7 @@ fun main() {
 
     } else {
 
-        pB = ProcessBuilder("bash", "-c", "cd $pathJar && java -jar PruebaPaginaWeb-1.0-SNAPSHOT.jar $url").start()
+        pB = ProcessBuilder("bash", "-c", "cd $pathJar && java -jar PruebaPaginaWeb-1.0.jar $url").start()
         reader = pB.inputStream.bufferedReader().lineSequence().joinToString("\n")
 
         println("HTML leido correctamente")
